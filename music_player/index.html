@@ -35,25 +35,25 @@
 
         <!-- Control -->
         <div class="control">
-          <div class="btn btn-repeat">
+          <div style="cursor: pointer" class="btn btn-repeat">
             <i class="fas fa-redo"></i>
           </div>
-          <div class="btn btn-prev">
+          <div style="cursor: pointer" class="btn btn-prev">
             <i class="fas fa-step-backward"></i>
           </div>
-          <div class="btn btn-toggle-play">
+          <div style="cursor: pointer" class="btn btn-toggle-play">
             <i class="fas fa-pause icon-pause"></i>
             <i class="fas fa-play icon-play"></i>
           </div>
-          <div class="btn btn-next">
+          <div style="cursor: pointer" class="btn btn-next">
             <i class="fas fa-step-forward"></i>
           </div>
-          <div class="btn btn-random">
+          <div style="cursor: pointer" class="btn btn-random">
             <i class="fas fa-random"></i>
           </div>
         </div>
 
-        <input
+        <input style="cursor: pointer"
           id="progress"
           class="progress"
           type="range"
@@ -168,7 +168,7 @@
         render: function () {
           const htmls = this.songs.map((song, index) => {
             return `
-              <div class="song ${index === this.currentIndex ? 'active' : ''}" data-index='${index}'>
+              <div style="cursor: pointer" class="song ${index === this.currentIndex ? 'active' : ''}" data-index='${index}'>
                   <div class="thumb"
                       style="background-image: url(${song.image});">
                   </div>
