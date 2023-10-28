@@ -40,7 +40,6 @@ const app = {
     {
       name: "Đế Vương",
       singer: "Đình Dũng",
-      // path: "http://soundimage.org/wp-content/uploads/2017/05/Nighttime-Escape.mp3",
       path: "./assets/audio/Đế Vương.mp3",
       image: "https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg",
     },
@@ -86,10 +85,12 @@ const app = {
         "https://a10.gaanacdn.com/gn_img/albums/YoEWlabzXB/oEWlj5gYKz/size_xxl_1586752323.webp",
     },
   ],
+
   setConfig: function (key, value) {
     this.config[key] = value;
     localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config));
   },
+
   render: function () {
     const htmls = this.songs.map((song, index) => {
       return `
